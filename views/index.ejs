@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>TSUKUTTER</title>
+</head>
+
+<body>
+    <form action="query" method="get">
+        誰のツイートを表示する？：<input type="text" name="display_name">
+        <input type="submit" value="検索">
+    </form>
+
+    <h1>Tsukutter タイムライン</h1>
+    <ul>
+        <% for (let row of results) { %>
+            <li>(<%- row.display_name %>) <%- row.content %>
+            </li>
+            <% } %>
+    </ul>
+</body>
+
+</html>
