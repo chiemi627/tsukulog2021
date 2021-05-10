@@ -36,12 +36,12 @@
         </div>
         <div id="rate">
             <span class="star fs-3 ">
-                <% for(i=0; i<rate; i++){ %>
+                <% for(i=0; i<Math.floor(rate); i++){ %>
                 ★
                 <% } %>
             </span>
             <span class="gray-star fs-3">
-                <% for(i=0;i<5-rate; i++){ %>
+                <% for(i=0;i<5-Math.floor(rate); i++){ %>
                 ☆
                 <% } %>
             </span> <span class="rate fs-3 fw-bold"><%- rate %></span>
